@@ -1,0 +1,41 @@
+.company {
+    padding: 94px 0;
+  }
+  
+  .list-company {
+    @include centeredFlex(flex, space-between);
+  }
+  
+  .list-company__link {
+    @include centeredFlex();
+
+    border: 1px solid #afb1b8;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 170px;
+    height: 92px;
+
+  
+    transition: border-color 250ms $timingFunction;
+
+      &:hover,
+      &:focus {
+      border-color: $accentColor;
+      outline: $accentColor;
+    }
+  }
+  
+  .list-company__icon {
+    fill: #afb1b8;
+    transition: fill 250ms $timingFunction;
+
+      .list-company__link:hover &,
+      .list-company__link:focus &{
+        fill: $accentColor;
+      }
+  }
+  
+  
+  
+ 
+  

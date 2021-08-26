@@ -1,0 +1,102 @@
+.footer {
+    padding: 60px 0;
+    background-color: #2f303a;
+  }
+  
+  .footer__container {
+    display: flex;
+    align-items: baseline;
+  }
+  
+  .footer__address {
+    width: 231px;
+  }
+  
+  .footer__logo {
+    margin-bottom: 20px;
+  }
+  
+  .bock-logo__link--lighter {
+    color: $primaryColorWhite;
+  }
+  
+  .list-address {
+    font-style: normal;
+    line-height: 1.7;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+  }
+  
+  .list-address__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+  
+  .list-address__item--lighter {
+    color: $primaryColorWhite;
+  }
+  
+  .list-address__item--darker {
+    color: $colorContacts;
+  }
+  
+  /* ПРИСОЕДИНЯЙТЕСЬ */
+  .footer__social {
+    margin-left: 70px;
+  }
+  
+  .block-social__title {
+    margin-bottom: 20px;
+  
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $primaryColorWhite;
+  }
+  
+  /*ПОДПИШИТЕСЬ НА РАССЫЛКУ*/
+  .footer__mailing {
+    margin-left: auto;
+    width: 570px;
+  }
+  
+  .form-mailing {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .form-mailing__label {
+    margin-bottom: 20px;
+  
+    display: block;
+  
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  
+    color: #ffffff;
+  }
+  
+  .form-mailing__box {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .form-mailing__input {
+    padding-left: 16px;
+    margin-right: 12px;
+    width: 358px;
+    height: 50px;
+    background-color: #2f303a;
+    color: rgba(255, 255, 255, 0.6);
+  
+    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+  }
+  
+  .button-mailing__icon {
+    display: block;
+    margin-left: 10px;
+  }

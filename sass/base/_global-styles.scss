@@ -1,0 +1,117 @@
+// @font-face { 
+//   font-family: "Raleway";
+//   src: local("Raleway"),
+//        url(../../fonts/raleway-v22-latin-700.eot) format("eot"), 
+//        url(../..//fonts/raleway-v22-latin-700.woff) format("woff"), 
+//        url(../..//fonts/raleway-v22-latin-700.woff2) format("woff2"),
+//        url(../..//fonts/raleway-v22-latin-700.ttf) format("truetype");
+//   font-weight: bold;
+//   font-style: italic;
+// }
+
+// @font-face { 
+//   font-family: "Roboto";
+//   src: local("Roboto"),
+//        url(../..//fonts/roboto-v27-latin_cyrillic-regular.eot) format("eot"), 
+//        url(../..//fonts/roboto-v27-latin_cyrillic-regular.woff) format("woff"), 
+//        url(../..//fonts/roboto-v27-latin_cyrillic-regular.woff2) format("woff2"),
+//        url(../..//fonts/roboto-v27-latin_cyrillic-regular.ttf) format("truetype");
+//   font-weight: 400;
+//   font-style: italic;
+// }
+
+// @font-face { 
+//   font-family: "Roboto";
+//   src: local("Roboto"),
+//        url(/fonts/roboto-v27-latin_cyrillic-500.eot) format("eot"), 
+//        url(/fonts/roboto-v27-latin_cyrillic-500.woff) format("woff"), 
+//        url(/fonts/roboto-v27-latin_cyrillic-500.woff2) format("woff2"),
+//        url(/fonts/roboto-v27-latin_cyrillic-500.ttf) format("truetype");
+//   font-weight: 500;
+//   font-style: italic;
+// }
+
+// @font-face { 
+//   font-family: "Roboto";
+//   src: local("Roboto"),
+//        url(/fonts/roboto-v27-latin_cyrillic-700.eot) format("eot"), 
+//        url(/fonts/roboto-v27-latin_cyrillic-700.woff) format("woff"), 
+//        url(/fonts/roboto-v27-latin_cyrillic-700.woff2) format("woff2"),
+//        url(/fonts/roboto-v27-latin_cyrillic-700.ttf) format("truetype");
+//   font-weight: 700;
+//   font-style: italic;
+// }
+
+// @font-face { 
+//   font-family: "Roboto";
+//   src: local("Roboto"),
+//        url(../..//fonts/roboto-v27-latin_cyrillic-900.eot) format("eot"), 
+//        url(../..//fonts/roboto-v27-latin_cyrillic-900.woff) format("woff"), 
+//        url(../..//fonts/roboto-v27-latin_cyrillic-900.woff2) format("woff2"),
+//        url(../..//fonts/roboto-v27-latin_cyrillic-900.ttf) format("truetype");
+//   font-weight: 900;
+//   font-style: italic;
+// }
+// // family=Raleway:wght@700&
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: $textColor;
+    background-color: $primaryColorWhite;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+  }
+  
+  img {
+    display: block;
+    width: 100%;
+  }
+  
+  /* відміняємо маркер списку */
+  .list {
+    list-style: none;
+  }
+  
+  /* відміняємо підкреслення посилань */
+  .link-style {
+    text-decoration: none;
+  }
+  
+  /* стилі для контейнерів */
+  
+  .container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+  }
+  
+  /* Скидаю глобально зовнішні відступи  */
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0px;
+  }
+  
+  p {
+    margin: 0px;
+  }
+  
+  ul {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .section-advantages__title--hidden,
+  .section-portfolio__title--hidden{
+    position: absolute;
+  
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }

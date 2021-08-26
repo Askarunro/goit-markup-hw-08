@@ -1,0 +1,38 @@
+.section-advantages {
+    padding: 94px 0;
+  }
+  
+  .list-advantages {
+    @include centeredFlex();
+  }
+  
+  .list-advantages__item {
+    max-width: 270px;
+
+      &:not(:first-child) {
+        margin-left: 30px;
+      }
+  }
+  
+  .list-advantages__box {
+    @include centeredFlex();
+  
+    margin-bottom: 30px;
+    height: 120px;
+    border-radius: 4px;
+    background-color: #f5f4fa;
+  }
+  
+  .list-advantages__subtitle {
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $primaryTextColor;
+  }
+  
+  .list-advantages__text {
+    padding-top: 10px;
+  
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }

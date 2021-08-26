@@ -1,0 +1,110 @@
+.header{
+    padding: 32px 0;
+  
+    color: $primaryColorWhite;
+    border-bottom: 1px solid #ececec;
+  }
+  
+  .container--flex {
+    @include centeredFlex(flex, space-between);
+  }
+  
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navigation__list{
+    display: flex;
+    margin-left: 93px;
+  
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+  
+  .navigation__item:not(:first-child) {
+    margin-left: 50px;
+  }
+  
+  .navigation__link{
+    position: relative;
+  
+    color: $primaryTextColor;
+  
+    transition: color 250ms $timingFunction;
+
+    &.current {
+      color: $accentColor;
+
+      &::after {
+        content: '';
+      
+        position: absolute;
+      
+        display: block;
+        width: 100%;
+        height: 5px;
+        border-radius: 3px;
+      
+        background-color: $accentColor;
+        left: 0;
+        bottom: -40px;
+      }
+    }
+
+    &:hover,
+    &:focus {
+    color: $accentColor;
+  }
+}
+  
+  
+  
+  
+  
+
+  
+  .contact{
+    display: flex;
+    align-items: center;
+  
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+  
+  .contact__item{
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .contact__item:first-child {
+    margin-right: 30px;
+  }
+  
+  .contact__link {
+    display: inline-flex;
+    align-items: center;
+  
+    color: $textColor;
+  
+    transition: color 250ms $timingFunction;
+  }
+  
+  .contact__icon {
+    margin-right: 10px;
+  
+    fill: currentColor;
+    transition: fill 250ms $timingFunction;
+  }
+  
+  .contact__link:hover,
+  .contact__link:focus{
+    color: $accentColor;
+  }
+  
+  .contact__link:hover .contact__icon,
+  .contact__link:focus .contact__icon{
+    fill: $accentColor;
+  }

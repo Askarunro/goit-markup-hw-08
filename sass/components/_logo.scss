@@ -1,0 +1,14 @@
+.logo {
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: $accentColor;
+  
+  
+    &--darker {
+        text-indent: 0%;
+        color: #000000;
+    }
+}
+
