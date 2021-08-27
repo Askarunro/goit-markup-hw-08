@@ -6,16 +6,16 @@
   }
   
   .container--flex {
-    @include centeredFlex(flex, space-between);
+    // @include centeredFlex(flex, space-between);
   }
   
   .navigation {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
   }
   
   .navigation__list{
-    display: flex;
+    // display: flex;
     margin-left: 93px;
   
     font-weight: 500;
@@ -60,8 +60,8 @@
 }
   
   .contact{
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
   
     font-weight: 500;
     line-height: 1.2;
@@ -69,8 +69,8 @@
   }
   
   .contact__item{
-    display: inline-flex;
-    align-items: center;
+    // display: inline-flex;
+    // align-items: center;
   }
   
   .contact__item:first-child {
@@ -78,8 +78,8 @@
   }
   
   .contact__link {
-    display: inline-flex;
-    align-items: center;
+    // display: inline-flex;
+    // align-items: center;
   
     color: $textColor;
   

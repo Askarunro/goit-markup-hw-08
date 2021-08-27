@@ -1,12 +1,17 @@
 .section-team {
-    padding: 94px 0;
+    // padding: 94px 0;
   
     text-align: center;
     background-color: #f5f4fa;
+
+
+    padding: 60px 0;
   }
   
   .list-team  {
-    display: flex;
+    // display: flex;
+
+    max-width: 100%;
   }
   
   .list-team__card {
@@ -18,9 +23,9 @@
     line-height: 1.2;
     background-color: $primaryColorWhite;
 
-      &:not(:first-child) {
-        margin-left: 30px;
-      }
+      // &:not(:first-child) {
+      //   margin-left: 30px;
+      // }
   }
   
   .member-card {
@@ -37,7 +42,7 @@
   }
   
   .member-card__box {
-    display: flex;
+    // display: flex;
   
     margin-top: 16px;
     padding: 0 32px;

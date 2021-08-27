@@ -60,11 +60,17 @@
     background-color: $primaryColorWhite;
     font-size: 14px;
     letter-spacing: 0.03em;
+
+
+    // max-width: 480px;
   }
   
   img {
     display: block;
-    width: 100%;
+    // width: 100%;
+
+    max-width: 100%;
+    height: auto;
   }
   
   /* відміняємо маркер списку */
@@ -80,10 +86,25 @@
   /* стилі для контейнерів */
   
   .container {
-    width: 1200px;
+    // max-width: 1200px;
+
+
     margin-left: auto;
     margin-right: auto;
     padding: 0 15px;
+
+    @media screen and (min-width: 480px){
+      max-width:480px;
+    }
+
+    @media screen and (min-width: 768px){
+      max-width:768px;
+    }
+
+    @media screen and (min-width: 1200px){
+      max-width:1200px;
+    }
+
   }
   
   /* Скидаю глобально зовнішні відступи  */

@@ -3,20 +3,46 @@
   }
   
   .list-company {
-    @include centeredFlex(flex, space-between);
+    // @include centeredFlex(flex, space-between);
+  
+
+
+  margin: -15px;
+
+
+  // max-width: 480px;
   }
   
+
+  .list-company__item{
+
+
+
+
+    margin: 15px;
+   
+
+
+  }
+
   .list-company__link {
     @include centeredFlex();
 
     border: 1px solid #afb1b8;
     box-sizing: border-box;
     border-radius: 4px;
-    width: 170px;
+    // width: 170px;
     height: 92px;
 
   
     transition: border-color 250ms $timingFunction;
+
+
+  
+    flex-wrap: wrap;
+    max-width: 210px;
+
+
 
       &:hover,
       &:focus {
