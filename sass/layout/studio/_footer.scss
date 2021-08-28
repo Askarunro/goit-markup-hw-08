@@ -4,14 +4,34 @@
   }
   
   .footer__container {
-    // display: flex;
-    // align-items: baseline;
+  
     text-align: center;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px){
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        align-items: baseline;
+        text-align: left;
+    }
 
   }
   
   .footer__address {
-    // width: 231px;
+    
+    @media screen and (min-width: 768px) and (max-width: 1199px){
+      width: 231px;
+      margin-right: 165px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 231px;
+    }
   }
   
   .footer__logo {
@@ -43,32 +63,48 @@
   
   /* ПРИСОЕДИНЯЙТЕСЬ */
   .footer__social {
-    // margin-left: 70px;
+   
     display: inline-block;
     margin-top: 60px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px){
+      margin-top: 0px;
+      
+    }
+
+    @media screen and (min-width: 1200px){
+      margin-top: 0px;
+      margin-left: 70px;
+    }
   }
   
   .block-social__title {
-    // margin-bottom: 20px;
+    margin-bottom: 20px;
   
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
     color: $primaryColorWhite;
 
-margin-bottom: 20px;
   }
   
   /*ПОДПИШИТЕСЬ НА РАССЫЛКУ*/
   .footer__mailing {
-    // margin-left: auto;
-    // width: 570px;
+  
     margin-top: 60px;
+
+    @media screen and (min-width: 1200px){
+      margin-left: auto;
+      margin-top: 0px;
+      width: 570px;
+    }
   }
   
   .form-mailing {
-    // display: flex;
-    // flex-wrap: wrap;
+    @media screen and (min-width: 1200px){
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
   
   .form-mailing__label {
@@ -86,16 +122,18 @@ margin-bottom: 20px;
   }
   
   .form-mailing__box {
-    // display: flex;
-    // justify-content: space-between;
-    max-width: 100%;
+    
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      justify-content: space-between;
+    }
 
   }
   
   .form-mailing__input {
     padding-left: 16px;
     margin-right: 12px;
-    // width: 358px;
+    
     height: 50px;
     background-color: #2f303a;
     color: rgba(255, 255, 255, 0.6);
@@ -104,10 +142,25 @@ margin-bottom: 20px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
 
+    display: inline-flex;
+    width: 100%;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px){
+      width: 450px;
+     }
+
+    @media screen and (min-width: 1200px) {
+     width: 358px;
+    }
   }
   
   .button-mailing{
     margin-top: 20px;
+
+    @media screen and (min-width: 1200px) {
+      margin: 0px;
+     }
+    
   }
 
   .button-mailing__icon {
