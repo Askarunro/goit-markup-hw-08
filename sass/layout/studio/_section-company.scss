@@ -7,7 +7,6 @@
   }
   
   .list-company {
-    // @include centeredFlex(flex, space-between);
     @media screen and (max-width: 767px) {
       margin: -15px;
       display: flex;
