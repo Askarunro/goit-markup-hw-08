@@ -611,7 +611,7 @@ ul {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 63px 24px;
+  padding: 77px 24px;
   color: #ffffff;
   background-color: rgba(33, 150, 243, 0.9);
   -webkit-transform: translatey(100%);
@@ -626,6 +626,18 @@ ul {
   pointer-events: none;
   font-size: 18px;
   line-height: 1.56;
+}
+
+@media screen and (min-width: 768px) {
+  .overlay-portfolio {
+    padding: 49px 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .overlay-portfolio {
+    padding: 63px 24px;
+  }
 }
 
 .list-cadrs__link:hover .overlay-portfolio {

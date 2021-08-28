@@ -66,15 +66,15 @@
           }
   }
   
-  .section-portfolio__cadrs{
+  // .section-portfolio__cadrs{
 
-    // @media screen and (min-width: 768px){
-    //   margin: -15px;
-    //   display: flex;
-    //   flex-wrap: wrap;
+  //   // @media screen and (min-width: 768px){
+  //   //   margin: -15px;
+  //   //   display: flex;
+  //   //   flex-wrap: wrap;
       
-    //       }
-  }
+  //   //       }
+  // }
   
   .list-cadrs__item {
     &:hover {
@@ -112,8 +112,8 @@
   
     @include centeredFlex();
   
-    padding: 63px 24px;
-  
+    padding: 77px 24px;
+
     color: $primaryColorWhite;
     background-color: rgba(33, 150, 243, 0.9);
   
@@ -125,6 +125,13 @@
     font-size: 18px;
     line-height: 1.56;
 
+    @media screen and (min-width: 768px) {
+      padding: 49px 24px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding: 63px 24px;
+    }
 
       .list-cadrs__link:hover & {
         transform: translatey(0);
