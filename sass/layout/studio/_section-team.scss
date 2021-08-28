@@ -1,17 +1,25 @@
 .section-team {
-    // padding: 94px 0;
+    padding: 60px 0;
   
     text-align: center;
     background-color: #f5f4fa;
 
-
-    padding: 60px 0;
+    @media screen and (min-width: 1200px){
+      padding: 94px 0;
+    }
   }
   
   .list-team  {
-    // display: flex;
+    
+    @media screen and (min-width: 768px) and (max-width: 1199px){
+      margin: -15px;
+      display: inline-flex;
+      flex-wrap: wrap;
+    }
 
-    max-width: 100%;
+    @media screen and (min-width: 1200px){
+        display: flex;}
+
   }
   
   .list-team__card {
@@ -23,9 +31,23 @@
     line-height: 1.2;
     background-color: $primaryColorWhite;
 
-      // &:not(:first-child) {
-      //   margin-left: 30px;
-      // }
+
+      @media screen and (max-width: 767px){
+        &:not(:last-child) {
+        margin-bottom: 30px;
+        }
+    }
+
+      @media screen and (min-width: 768px) and (max-width: 1199px){
+        margin: 15px;
+        max-width: calc((100% - 60px) / 2);
+    }
+
+      @media screen and (min-width: 1200px){
+          &:not(:first-child) {
+          margin-left: 30px;
+          }
+      }
   }
   
   .member-card {
@@ -42,7 +64,8 @@
   }
   
   .member-card__box {
-    // display: flex;
+    display: flex;
+    justify-content: center;
   
     margin-top: 16px;
     padding: 0 32px;

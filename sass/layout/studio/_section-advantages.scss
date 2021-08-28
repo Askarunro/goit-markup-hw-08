@@ -1,27 +1,46 @@
 .section-advantages {
-    // padding: 94px 0;
-
-
-
     padding: 60px 0;
+
+    @media screen and (min-width: 1200px) {
+      padding: 94px 0;;
+      }
   }
   
   .list-advantages {
-    // @include centeredFlex();
+    @media screen and (min-width: 1200px) {
+    @include centeredFlex();
+    }
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+    }
   }
   
   .list-advantages__item {
     
-    // max-width: 270px;
-
-      // &:not(:first-child) {
-      //   margin-left: 30px;
-      // }
-
-      max-width: 100%;
-      &:not(:first-child) {
-         margin-top: 30px;
+      @media screen and (max-width: 767px) {
+        max-width: 100%;
+        &:not(:first-child) {
+          margin-top: 30px;
+        }
       }
+      
+      @media screen and (max-width: 1199px) {
+        max-width: 100%;
+        margin: 15px;
+        max-width: calc((100% - 60px)/2);
+      }
+
+      @media screen and (min-width: 1200px) {
+           max-width: 270px;
+
+          &:not(:first-child) {
+            margin-left: 30px;
+          }
+      }
+
   }
   
   .list-advantages__box {
@@ -41,6 +60,10 @@
 
 
     text-align: center;
+
+    @media screen and (min-width: 768px) {
+      text-align: left;
+    }
   }
   
   .list-advantages__text {

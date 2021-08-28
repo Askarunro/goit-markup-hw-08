@@ -6,10 +6,12 @@
   .footer__container {
     // display: flex;
     // align-items: baseline;
+    text-align: center;
+
   }
   
   .footer__address {
-    width: 231px;
+    // width: 231px;
   }
   
   .footer__logo {
@@ -28,7 +30,7 @@
   }
   
   .list-address__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
   }
   
   .list-address__item--lighter {
@@ -41,22 +43,27 @@
   
   /* ПРИСОЕДИНЯЙТЕСЬ */
   .footer__social {
-    margin-left: 70px;
+    // margin-left: 70px;
+    display: inline-block;
+    margin-top: 60px;
   }
   
   .block-social__title {
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
   
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
     color: $primaryColorWhite;
+
+margin-bottom: 20px;
   }
   
   /*ПОДПИШИТЕСЬ НА РАССЫЛКУ*/
   .footer__mailing {
-    margin-left: auto;
-    width: 570px;
+    // margin-left: auto;
+    // width: 570px;
+    margin-top: 60px;
   }
   
   .form-mailing {
@@ -81,12 +88,14 @@
   .form-mailing__box {
     // display: flex;
     // justify-content: space-between;
+    max-width: 100%;
+
   }
   
   .form-mailing__input {
     padding-left: 16px;
     margin-right: 12px;
-    width: 358px;
+    // width: 358px;
     height: 50px;
     background-color: #2f303a;
     color: rgba(255, 255, 255, 0.6);
@@ -94,8 +103,13 @@
     border: none;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
+
   }
   
+  .button-mailing{
+    margin-top: 20px;
+  }
+
   .button-mailing__icon {
     display: block;
     margin-left: 10px;
