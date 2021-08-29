@@ -28,6 +28,32 @@
    
   }
   
+  .menu-button{
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    & .icon-menu{
+      display: block;
+    }
+    @media screen and (min-width:768px) {
+      display: none;
+    }
+  }
+
+  .menu-button .icon-cross{
+    display: none;
+  }
+
+  .menu-button.is-open .icon-cross{
+    display: block;
+  }
+
+  .menu-button.is-open .icon-menu{
+    display: none;
+  }
+
   .navigation__list{
     font-weight: 500;
     line-height: 1.2;
@@ -75,7 +101,7 @@
           left: 0;
           bottom: -38px;
         }
-        
+
         @media screen and (min-width:1200px) {
           bottom: -32px;
         }
