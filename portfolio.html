@@ -15,12 +15,28 @@
         <!--Шапка-->
         <header class="header">
             <div class="container container--flex">
-                <nav class="navigation">
-                    <a href="./index.html" class="logo link-style">
+                <div class="header-menu">
+                    <a href="./index.html" class="logo link-style logo--hidden">
                         Web<span class="logo--darker">Studio</span>
                     </a>
+                    <button type="button" 
+                    class="menu-button"
+                     aria-expanded="false" 
+                     data-menu-button
+                     aria-controls="header-nav"
+                     > 
+                        <svg width="40" height="40" aria-label="переключатель меню">
+
+                            <use class="icon-cross" href="./images/sprite.svg#cross"></use>
+                            <use class="icon-menu" href="./images/sprite.svg#menu"></use>
+
+                        </svg>
+                    </button>
+                </div>
+                <div class="header-nav" id="header-nav" data-menu>
+                    <nav class="navigation">
                     <ul class="navigation__list list">
-                        <li class="navigation__item"><a href="./index.html" class="navigation__link link-style">Студия</a></li>
+                        <li class="navigation__item"><a href="./index.html" class="navigation__link link-style ">Студия</a></li>
                         <li class="navigation__item"><a href="./portfolio.html" class="navigation__link link-style current">Портфолио</a></li>
                         <li class="navigation__item"><a href="#" class="navigation__link link-style">Контакты</a></li>
                     </ul>
@@ -42,6 +58,13 @@
                         </a>
                     </li>
                 </ul>
+                <ul class="header-nav__social list">
+                    <li class="header-nav__item"><a href="#" class="header-nav__social--accent link-style">Instagram</a></li>
+                    <li class="header-nav__item"><a href="#" class="header-nav__social--accent link-style">Twitter</a></li>
+                    <li class="header-nav__item"><a href="#" class="header-nav__social--accent link-style">Facebook</a></li>
+                    <li class="header-nav__item"><a href="#" class="header-nav__social--accent link-style">LinkedIn</a></li>
+                </ul>
+                </div>
             </div>
         </header>
         <main>
@@ -650,6 +673,7 @@
                     </form>
                 </div>
             </div>
-        </footer>     
+        </footer>   
+        <script src="./js/modal.js"></script>  
     </body>
 </html>
