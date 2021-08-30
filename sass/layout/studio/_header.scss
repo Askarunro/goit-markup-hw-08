@@ -48,6 +48,18 @@
     }
   }
 
+.menu-button{
+  transition: fill 250ms $timingFunction;
+}
+
+  .icon-cross:hover,
+  .icon-cross:focus,
+  .icon-menu:hover,
+  .icon-menu:focus
+  {
+    fill: $accentColor;
+  }
+
   .menu-button .icon-cross{
     display: none;
   }
@@ -55,8 +67,6 @@
   .menu-button.is-open .icon-cross{
     display: block;
   }
-
-  
 
   .menu-button.is-open .icon-menu{
     display: none;

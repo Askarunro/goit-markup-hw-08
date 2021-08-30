@@ -431,6 +431,19 @@ ul {
   }
 }
 
+.menu-button {
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-cross:hover,
+.icon-cross:focus,
+.icon-menu:hover,
+.icon-menu:focus {
+  fill: #2196f3;
+}
+
 .menu-button .icon-cross {
   display: none;
 }
