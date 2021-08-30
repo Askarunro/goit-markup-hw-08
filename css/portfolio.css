@@ -439,10 +439,6 @@ ul {
   display: block;
 }
 
-.menu-button.is-open .logo--hidden {
-  display: none;
-}
-
 .menu-button.is-open .icon-menu {
   display: none;
 }
