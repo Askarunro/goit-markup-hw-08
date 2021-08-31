@@ -415,6 +415,7 @@ ul {
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  z-index: 3;
   margin: 0;
   padding: 0;
   border: none;
@@ -489,7 +490,7 @@ ul {
     display: block;
     position: absolute;
     z-index: 2;
-    top: 100%;
+    top: -16px;
     left: 0;
     width: 480px;
     padding: 48px 40px;
