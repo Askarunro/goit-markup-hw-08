@@ -1,680 +1,583 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/portfolio.min.css">
     <title>Portfolio</title>
 </head>
-    <body>
-        <!--Шапка-->
-        <header class="header">
-            <div class="container container--flex">
-                <div class="header-menu">
-                    <a href="./index.html" class="logo link-style logo--hidden">
-                        Web<span class="logo--darker">Studio</span>
-                    </a>
-                    <button type="button" 
-                    class="menu-button"
-                     aria-expanded="false" 
-                     data-menu-button
-                     aria-controls="header-nav"
-                     > 
-                        <svg width="40" height="40" aria-label="переключатель меню">
 
-                            <use class="icon-cross" href="./images/sprite.svg#cross"></use>
-                            <use class="icon-menu" href="./images/sprite.svg#menu"></use>
+<body>
+    <!--Шапка-->
+    <header class="header">
+        <div class="container container--flex">
+            <div class="header-menu">
+                <a href="./index.html" class="logo link-style logo--hidden">
+                    Web<span class="logo--darker">Studio</span>
+                </a>
+                <button type="button" class="menu-button" aria-expanded="false" data-menu-button
+                    aria-controls="header-nav">
+                    <svg width="40" height="40" aria-label="переключатель меню">
 
-                        </svg>
-                    </button>
-                </div>
-                <div class="header-nav" id="header-nav" data-menu>
-                    <nav class="navigation">
+                        <use class="icon-cross" href="./images/sprite.svg#cross"></use>
+                        <use class="icon-menu" href="./images/sprite.svg#menu"></use>
+
+                    </svg>
+                </button>
+            </div>
+            <div class="header-nav" id="header-nav" data-menu>
+                <nav class="navigation">
                     <ul class="navigation__list list">
-                        <li class="navigation__item"><a href="./index.html" class="navigation__link link-style ">Студия</a></li>
-                        <li class="navigation__item"><a href="./portfolio.html" class="navigation__link link-style current">Портфолио</a></li>
+                        <li class="navigation__item"><a href="./index.html"
+                                class="navigation__link link-style ">Студия</a></li>
+                        <li class="navigation__item"><a href="./portfolio.html"
+                                class="navigation__link link-style current">Портфолио</a></li>
                         <li class="navigation__item"><a href="#" class="navigation__link link-style">Контакты</a></li>
                     </ul>
-                    </nav>
-                    <ul class="contact list">
-                        <li class="contact__item link-mail">
-                            <a href="mailto:info@devstudio.com" class="contact__link link-style">
-                                <svg class="contact__icon" width="16" height="12">
-                                    <use  href="./images/sprite.svg#envelope"></use>
-                                </svg> 
-                                info@devstudio.com
-                            </a>
-                        </li>
-                        <li class="contact__item link-tel">
-                            <a href="tel:+380961111111" class="contact__link link-style">
-                                <svg class="contact__icon" width="10" height="16">
-                                    <use href="./images/sprite.svg#smartphone"></use>
-                                </svg>+38 096 111 11 11
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="header-nav__social list">
-                        <li class="header-nav__item"><a href="#" class="header-nav__social--accent link-style">Instagram</a></li>
-                        <li class="header-nav__item"><a href="#" class="header-nav__social--accent link-style">Twitter</a></li>
-                        <li class="header-nav__item"><a href="#" class="header-nav__social--accent link-style">Facebook</a></li>
-                        <li class="header-nav__item"><a href="#" class="header-nav__social--accent link-style">LinkedIn</a></li>
-                    </ul>
-                </div>
+                </nav>
+                <ul class="contact list">
+                    <li class="contact__item link-mail">
+                        <a href="mailto:info@devstudio.com" class="contact__link link-style">
+                            <svg class="contact__icon" width="16" height="12">
+                                <use href="./images/sprite.svg#envelope"></use>
+                            </svg>
+                            info@devstudio.com
+                        </a>
+                    </li>
+                    <li class="contact__item link-tel">
+                        <a href="tel:+380961111111" class="contact__link link-style">
+                            <svg class="contact__icon" width="10" height="16">
+                                <use href="./images/sprite.svg#smartphone"></use>
+                            </svg>+38 096 111 11 11
+                        </a>
+                    </li>
+                </ul>
+                <ul class="header-nav__social list">
+                    <li class="header-nav__item"><a href="#" class="header-nav__social--accent link-style">Instagram</a>
+                    </li>
+                    <li class="header-nav__item"><a href="#" class="header-nav__social--accent link-style">Twitter</a>
+                    </li>
+                    <li class="header-nav__item"><a href="#" class="header-nav__social--accent link-style">Facebook</a>
+                    </li>
+                    <li class="header-nav__item"><a href="#" class="header-nav__social--accent link-style">LinkedIn</a>
+                    </li>
+                </ul>
             </div>
-        </header>
-        <main>
-            <section class="section-portfolio">
-                <div class="container">
-                    <h1 class="section-portfolio__title--hidden">Портфолио</h1>
-                    <!-- Фільтр -->
-                    <ul class="list-filter section-portfolio__filter list">
-                        <li class="list-filter__item"><button type="button" class="button-filter">Все</button></li>
-                        <li class="list-filter__item"><button type="button" class="button-filter">Веб-сайты</button></li>
-                        <li class="list-filter__item"><button type="button" class="button-filter">Приложения</button></li>
-                        <li class="list-filter__item"><button type="button" class="button-filter">Дизайн</button></li>
-                        <li class="list-filter__item"><button type="button" class="button-filter">Маркетинг</button></li>
-                    </ul>
-                    <!-- список набору -->
-                    <ul class="list-cadrs section-portfolio__cadrs list">
-                        <li class="list-cadrs__item">
-                            <a href="" class="list-cadrs__link link-style">
-                                <div class="box-overlay">
-                                    <picture>
-                                        <source srcset="
+        </div>
+    </header>
+    <main>
+        <section class="section-portfolio">
+            <div class="container">
+                <h1 class="section-portfolio__title--hidden">Портфолио</h1>
+                <!-- Фільтр -->
+                <ul class="list-filter section-portfolio__filter list">
+                    <li class="list-filter__item"><button type="button" class="button-filter">Все</button></li>
+                    <li class="list-filter__item"><button type="button" class="button-filter">Веб-сайты</button></li>
+                    <li class="list-filter__item"><button type="button" class="button-filter">Приложения</button></li>
+                    <li class="list-filter__item"><button type="button" class="button-filter">Дизайн</button></li>
+                    <li class="list-filter__item"><button type="button" class="button-filter">Маркетинг</button></li>
+                </ul>
+                <!-- список набору -->
+                <ul class="list-cadrs section-portfolio__cadrs list">
+                    <li class="list-cadrs__item">
+                        <a href="" class="list-cadrs__link link-style">
+                            <div class="box-overlay">
+                                <picture>
+                                    <source srcset="
                                             images/mobile-img/portfolio/img_p.webp,
                                             images/mobile-img/portfolio/img_p@2x.webp 2x
-                                            "
-                                            media="(max-width: 767px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(max-width: 767px)" type="image/webp">
+                                    <source srcset="
                                             images/mobile-img/portfolio/img_p.jpg,
                                             images/mobile-img/portfolio/img_p@2x.jpg 2x
-                                            "
-                                            media="(max-width: 767px)" 
-                                            >
-                                            <source srcset="
+                                            " media="(max-width: 767px)">
+                                    <source srcset="
                                             images/desktop-img/portfolio/img_p.webp,
                                             images/desktop-img/portfolio/img_p@2x.webp 2x
-                                            "
-                                            media="(min-width: 1200px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(min-width: 1200px)" type="image/webp">
+                                    <source srcset="
                                             images/desktop-img/portfolio/img_p.jpg,
                                             images/desktop-img/portfolio/img_p@2x.jpg 2x
-                                            "
-                                            media="(min-width: 1200px)"
-                                            >
-                                        <source srcset="
+                                            " media="(min-width: 1200px)">
+                                    <source srcset="
                                             images/tablet-img/portfolio/img_p.webp,
                                             images/tablet-img/portfolio/img_p@2x.webp 2x
-                                            "
-                                            media="(min-width: 768px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(min-width: 768px)" type="image/webp">
+                                    <source srcset="
                                             images/tablet-img/portfolio/img_p.jpg,
                                             images/tablet-img/portfolio/img_p@2x.jpg 2x
-                                            "
-                                            media="(min-width: 768px)" 
-                                            >
-                                            
-                                        
-                                            <img src="./images/img_p.webp" alt=""> 
-                                    </picture>
-                                    
-                                    <div class="overlay-portfolio">
-                                        <p class="overlay-portfolio__text">Технокряк это современная площадка распространения
-                                            коронавируса. Компании используют эту платформу для
-                                            цифрового шпионажа и атак на защищённые
-                                            сервера конкурентов.</p>
-                                    </div>
+                                            " media="(min-width: 768px)">
+
+
+                                    <img src="./images/img_p.webp" alt="">
+                                </picture>
+
+                                <div class="overlay-portfolio">
+                                    <p class="overlay-portfolio__text">Технокряк это современная площадка
+                                        распространения
+                                        коронавируса. Компании используют эту платформу для
+                                        цифрового шпионажа и атак на защищённые
+                                        сервера конкурентов.
+                                    </p>
                                 </div>
-                                <div class="subtitle-content">
-                                    <h2 class="list-cadrs__subtitle">Технокряк</h2>
-                                    <p class="list-cadrs__description">Веб-сайт</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="list-cadrs__item">
-                            <a href="" class="list-cadrs__link link-style">
-                                <div class="box-overlay">
-                                    <picture>
-                                        <source srcset="
+                            </div>
+                            <div class="subtitle-content">
+                                <h2 class="list-cadrs__subtitle">Технокряк</h2>
+                                <p class="list-cadrs__description">Веб-сайт</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-cadrs__item">
+                        <a href="" class="list-cadrs__link link-style">
+                            <div class="box-overlay">
+                                <picture>
+                                    <source srcset="
                                             images/mobile-img/portfolio/img_p1.webp,
                                             images/mobile-img/portfolio/img_p1@2x.webp 2x
-                                            "
-                                            media="(max-width: 767px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(max-width: 767px)" type="image/webp">
+                                    <source srcset="
                                             images/mobile-img/portfolio/img_p1.jpg,
                                             images/mobile-img/portfolio/img_p1@2x.jpg 2x
-                                            "
-                                            media="(max-width: 767px)" 
-                                            >
-                                        <source srcset="
+                                            " media="(max-width: 767px)">
+                                    <source srcset="
                                             images/desktop-img/portfolio/img_p1.webp,
                                             images/desktop-img/portfolio/img_p1@2x.webp 2x
-                                            "
-                                            media="(min-width: 1200px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(min-width: 1200px)" type="image/webp">
+                                    <source srcset="
                                             images/desktop-img/portfolio/img_p1.jpg,
                                             images/desktop-img/portfolio/img_p1@2x.jpg 2x
-                                            "
-                                            media="(min-width: 1200px)"
-                                            >
-                                        <source srcset="
+                                            " media="(min-width: 1200px)">
+                                    <source srcset="
                                             images/tablet-img/portfolio/img_p1.webp,
                                             images/tablet-img/portfolio/img_p1@2x.webp 2x
-                                            "
-                                            media="(min-width: 768px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(min-width: 768px)" type="image/webp">
+                                    <source srcset="
                                             images/tablet-img/portfolio/img_p1.jpg,
                                             images/tablet-img/portfolio/img_p1@2x.jpg 2x
-                                            "
-                                            media="(min-width: 768px)" 
-                                            >
-                                            <img src="./images/img_p1.webp" alt="" > 
-                                    </picture>
-                                    
-                                    <div class="overlay-portfolio">
-                                        <p>Технокряк это современная площадка распространения
-                                            коронавируса. Компании используют эту платформу для
-                                            цифрового шпионажа и атак на защищённые
-                                            сервера конкурентов.</p>
-                                    </div>
+                                            " media="(min-width: 768px)">
+                                    <img src="./images/img_p1.webp" alt="">
+                                </picture>
+
+                                <div class="overlay-portfolio">
+                                    <p>Технокряк это современная площадка распространения
+                                        коронавируса. Компании используют эту платформу для
+                                        цифрового шпионажа и атак на защищённые
+                                        сервера конкурентов.</p>
                                 </div>
-                                <div class="subtitle-content">
-                                    <h2 class="list-cadrs__subtitle">Постер New Orlean vs Golden Star</h2>
-                                    <p class="list-cadrs__description">Дизайн</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="list-cadrs__item">
-                            <a href="" class="list-cadrs__link link-style">
-                                <div class="box-overlay">
-                                    <picture>
-                                        <source srcset="
+                            </div>
+                            <div class="subtitle-content">
+                                <h2 class="list-cadrs__subtitle">Постер New Orlean vs Golden Star</h2>
+                                <p class="list-cadrs__description">Дизайн</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-cadrs__item">
+                        <a href="" class="list-cadrs__link link-style">
+                            <div class="box-overlay">
+                                <picture>
+                                    <source srcset="
                                             images/mobile-img/portfolio/img_p2.webp,
                                             images/mobile-img/portfolio/img_p2@2x.webp 2x
-                                            "
-                                            media="(max-width: 767px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(max-width: 767px)" type="image/webp">
+                                    <source srcset="
                                             images/mobile-img/portfolio/img_p2.jpg,
                                             images/mobile-img/portfolio/img_p2@2x.jpg 2x
-                                            "
-                                            media="(max-width: 767px)" 
-                                            >
-                                        <source srcset="
+                                            " media="(max-width: 767px)">
+                                    <source srcset="
                                             images/desktop-img/portfolio/img_p2.webp,
                                             images/desktop-img/portfolio/img_p2@2x.webp 2x
-                                            "
-                                            media="(min-width: 1200px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(min-width: 1200px)" type="image/webp">
+                                    <source srcset="
                                             images/desktop-img/portfolio/img_p2.jpg,
                                             images/desktop-img/portfolio/img_p2@2x.jpg 2x
-                                            "
-                                            media="(min-width: 1200px)"
-                                            >
-                                        <source srcset="
+                                            " media="(min-width: 1200px)">
+                                    <source srcset="
                                             images/tablet-img/portfolio/img_p2.webp,
                                             images/tablet-img/portfolio/img_p2@2x.webp 2x
-                                            "
-                                            media="(min-width: 768px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(min-width: 768px)" type="image/webp">
+                                    <source srcset="
                                             images/tablet-img/portfolio/img_p2.jpg,
                                             images/tablet-img/portfolio/img_p2@2x.jpg 2x
-                                            "
-                                            media="(min-width: 768px)" 
-                                            >
-                                            
-                                            <img src="./images/img_p2.webp" alt="" >
-                                    </picture>
-                                    
-                                    <div class="overlay-portfolio">
-                                        <p>Технокряк это современная площадка распространения
-                                            коронавируса. Компании используют эту платформу для
-                                            цифрового шпионажа и атак на защищённые
-                                            сервера конкурентов.</p>
-                                    </div>
+                                            " media="(min-width: 768px)">
+
+                                    <img src="./images/img_p2.webp" alt="">
+                                </picture>
+
+                                <div class="overlay-portfolio">
+                                    <p>Технокряк это современная площадка распространения
+                                        коронавируса. Компании используют эту платформу для
+                                        цифрового шпионажа и атак на защищённые
+                                        сервера конкурентов.</p>
                                 </div>
-                                <div class="subtitle-content">
-                                    <h2 class="list-cadrs__subtitle">Ресторан Seafood</h2>
-                                    <p class="list-cadrs__description">Приложение</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="list-cadrs__item">
-                            <a href="" class="list-cadrs__link link-style">
-                                <div class="box-overlay">
-                                    <picture>
-                                        <source srcset="
+                            </div>
+                            <div class="subtitle-content">
+                                <h2 class="list-cadrs__subtitle">Ресторан Seafood</h2>
+                                <p class="list-cadrs__description">Приложение</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-cadrs__item">
+                        <a href="" class="list-cadrs__link link-style">
+                            <div class="box-overlay">
+                                <picture>
+                                    <source srcset="
                                             images/mobile-img/portfolio/img_p3.webp,
                                             images/mobile-img/portfolio/img_p3@2x.webp 2x
-                                            "
-                                            media="(max-width: 767px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(max-width: 767px)" type="image/webp">
+                                    <source srcset="
                                             images/mobile-img/portfolio/img_p3.jpg,
                                             images/mobile-img/portfolio/img_p3@2x.jpg 2x
-                                            "
-                                            media="(max-width: 767px)" 
-                                            >
-                                            <source srcset="
+                                            " media="(max-width: 767px)">
+                                    <source srcset="
                                             images/desktop-img/portfolio/img_p3.webp,
                                             images/desktop-img/portfolio/img_p3@2x.webp 2x
-                                            "
-                                            media="(min-width: 1200px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(min-width: 1200px)" type="image/webp">
+                                    <source srcset="
                                             images/desktop-img/portfolio/img_p3.jpg,
                                             images/desktop-img/portfolio/img_p3@2x.jpg 2x
-                                            "
-                                            media="(min-width: 1200px)"
-                                            >
-                                        <source srcset="
+                                            " media="(min-width: 1200px)">
+                                    <source srcset="
                                             images/tablet-img/portfolio/img_p3.webp,
                                             images/tablet-img/portfolio/img_p3@2x.webp 2x
-                                            "
-                                            media="(min-width: 768px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(min-width: 768px)" type="image/webp">
+                                    <source srcset="
                                             images/tablet-img/portfolio/img_p3.jpg,
                                             images/tablet-img/portfolio/img_p3@2x.jpg 2x
-                                            "
-                                            media="(min-width: 768px)" 
-                                            >
-                                            
-                                            <img src="./images/img_p3.webp" alt="" >
-                                    </picture>
-                                    
-                                    <div class="overlay-portfolio">
-                                        <p>Технокряк это современная площадка распространения
-                                            коронавируса. Компании используют эту платформу для
-                                            цифрового шпионажа и атак на защищённые
-                                            сервера конкурентов.</p>
-                                    </div>
+                                            " media="(min-width: 768px)">
+
+                                    <img src="./images/img_p3.webp" alt="">
+                                </picture>
+
+                                <div class="overlay-portfolio">
+                                    <p>Технокряк это современная площадка распространения
+                                        коронавируса. Компании используют эту платформу для
+                                        цифрового шпионажа и атак на защищённые
+                                        сервера конкурентов.</p>
                                 </div>
-                                <div class="subtitle-content">
-                                    <h2 class="list-cadrs__subtitle">Проект Prime</h2>
-                                    <p class="list-cadrs__description">Маркетинг</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="list-cadrs__item">
-                            <a href="" class="list-cadrs__link link-style">
-                                <div class="box-overlay">
-                                    <picture>
-                                        <source srcset="
+                            </div>
+                            <div class="subtitle-content">
+                                <h2 class="list-cadrs__subtitle">Проект Prime</h2>
+                                <p class="list-cadrs__description">Маркетинг</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-cadrs__item">
+                        <a href="" class="list-cadrs__link link-style">
+                            <div class="box-overlay">
+                                <picture>
+                                    <source srcset="
                                             ./images/mobile-img/portfolio/img_p4.webp,
                                             ./images/mobile-img/portfolio/img_p4@2x.webp 2x
-                                            "
-                                            media="(max-width: 767px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(max-width: 767px)" type="image/webp">
+                                    <source srcset="
                                             ./images/mobile-img/portfolio/img_p4.jpg,
                                             ./images/mobile-img/portfolio/img_p4@2x.jpg 2x
-                                            "
-                                            media="(max-width: 767px)" 
-                                            >
-                                            <source srcset="
+                                            " media="(max-width: 767px)">
+                                    <source srcset="
                                             ./images/desktop-img/portfolio/img_p4.webp,
                                             ./images/desktop-img/portfolio/img_p4@2x.webp 2x
-                                            "
-                                            media="(min-width: 1200px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(min-width: 1200px)" type="image/webp">
+                                    <source srcset="
                                             ./images/desktop-img/portfolio/img_p4.jpg,
                                             ./images/desktop-img/portfolio/img_p4@2x.jpg 2x
-                                            "
-                                            media="(min-width: 1200px)"
-                                            >
-                                        <source srcset="
+                                            " media="(min-width: 1200px)">
+                                    <source srcset="
                                             ./images/tablet-img/portfolio/img_p4.webp,
                                             ./images/tablet-img/portfolio/img_p4@2x.webp 2x
-                                            "
-                                            media="(min-width: 768px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(min-width: 768px)" type="image/webp">
+                                    <source srcset="
                                             ./images/tablet-img/portfolio/img_p4.jpg,
                                             ./images/tablet-img/portfolio/img_p4@2x.jpg 2x
-                                            "
-                                            media="(min-width: 768px)" 
-                                            >
-                                            
-                                            <img src="./images/img_p4.webp" alt="" >
-                                    </picture>
-                                   
-                                    <div class="overlay-portfolio">
-                                        <p>Технокряк это современная площадка распространения
-                                            коронавируса. Компании используют эту платформу для
-                                            цифрового шпионажа и атак на защищённые
-                                            сервера конкурентов.</p>
-                                    </div>
+                                            " media="(min-width: 768px)">
+
+                                    <img src="./images/img_p4.webp" alt="">
+                                </picture>
+
+                                <div class="overlay-portfolio">
+                                    <p>Технокряк это современная площадка распространения
+                                        коронавируса. Компании используют эту платформу для
+                                        цифрового шпионажа и атак на защищённые
+                                        сервера конкурентов.</p>
                                 </div>
-                                <div class="subtitle-content">
-                                    <h2 class="list-cadrs__subtitle">Проект Boxes</h2>
-                                    <p class="list-cadrs__description">Приложение</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="list-cadrs__item">
-                            <a href="" class="list-cadrs__link link-style">
-                                <div class="box-overlay">
-                                    <picture>
-                                        <source srcset="
+                            </div>
+                            <div class="subtitle-content">
+                                <h2 class="list-cadrs__subtitle">Проект Boxes</h2>
+                                <p class="list-cadrs__description">Приложение</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-cadrs__item">
+                        <a href="" class="list-cadrs__link link-style">
+                            <div class="box-overlay">
+                                <picture>
+                                    <source srcset="
                                             images/mobile-img/portfolio/img_p5.webp,
                                             images/mobile-img/portfolio/img_p5@2x.webp 2x
-                                            "
-                                            media="(max-width: 767px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(max-width: 767px)" type="image/webp">
+                                    <source srcset="
                                             images/mobile-img/portfolio/img_p5.jpg,
                                             images/mobile-img/portfolio/img_p5@2x.jpg 2x
-                                            "
-                                            media="(max-width: 767px)" 
-                                            >
-                                            <source srcset="
+                                            " media="(max-width: 767px)">
+                                    <source srcset="
                                             images/desktop-img/portfolio/img_p5.webp,
                                             images/desktop-img/portfolio/img_p5@2x.webp 2x
-                                            "
-                                            media="(min-width: 1200px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(min-width: 1200px)" type="image/webp">
+                                    <source srcset="
                                             images/desktop-img/portfolio/img_p5.jpg,
                                             images/desktop-img/portfolio/img_p5@2x.jpg 2x
-                                            "
-                                            media="(min-width: 1200px)"
-                                            >
-                                        <source srcset="
+                                            " media="(min-width: 1200px)">
+                                    <source srcset="
                                             images/tablet-img/portfolio/img_p5.webp,
                                             images/tablet-img/portfolio/img_p5@2x.webp 2x
-                                            "
-                                            media="(min-width: 768px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(min-width: 768px)" type="image/webp">
+                                    <source srcset="
                                             images/tablet-img/portfolio/img_p5.jpg,
                                             images/tablet-img/portfolio/img_p5@2x.jpg 2x
-                                            "
-                                            media="(min-width: 768px)" 
-                                            >
-                                            
-                                        
-                                            <img src="./images/img_p5.webp" alt="" >
-                                    </picture>
-                                    
-                                    <div class="overlay-portfolio">
-                                        <p>Технокряк это современная площадка распространения
-                                            коронавируса. Компании используют эту платформу для
-                                            цифрового шпионажа и атак на защищённые
-                                            сервера конкурентов.</p>
-                                    </div>
+                                            " media="(min-width: 768px)">
+
+
+                                    <img src="./images/img_p5.webp" alt="">
+                                </picture>
+
+                                <div class="overlay-portfolio">
+                                    <p>Технокряк это современная площадка распространения
+                                        коронавируса. Компании используют эту платформу для
+                                        цифрового шпионажа и атак на защищённые
+                                        сервера конкурентов.</p>
                                 </div>
-                                
-                                <div class="subtitle-content">
-                                    <h2 class="list-cadrs__subtitle">Inspiration has no Borders</h2>
-                                    <p class="list-cadrs__description">Веб-сайт</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="list-cadrs__item">
-                            <a href="" class="list-cadrs__link link-style">
-                                <div class="box-overlay">
-                                    <picture>
-                                        <source srcset="
+                            </div>
+
+                            <div class="subtitle-content">
+                                <h2 class="list-cadrs__subtitle">Inspiration has no Borders</h2>
+                                <p class="list-cadrs__description">Веб-сайт</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-cadrs__item">
+                        <a href="" class="list-cadrs__link link-style">
+                            <div class="box-overlay">
+                                <picture>
+                                    <source srcset="
                                             images/mobile-img/portfolio/img_p6.webp,
                                             images/mobile-img/portfolio/img_p6@2x.webp 2x
-                                            "
-                                            media="(max-width: 767px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(max-width: 767px)" type="image/webp">
+                                    <source srcset="
                                             images/mobile-img/portfolio/img_p6.jpg,
                                             images/mobile-img/portfolio/img_p6@2x.jpg 2x
-                                            "
-                                            media="(max-width: 767px)" 
-                                            >
-                                            <source srcset="
+                                            " media="(max-width: 767px)">
+                                    <source srcset="
                                             images/desktop-img/portfolio/img_p6.webp,
                                             images/desktop-img/portfolio/img_p6@2x.webp 2x
-                                            "
-                                            media="(min-width: 1200px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(min-width: 1200px)" type="image/webp">
+                                    <source srcset="
                                             images/desktop-img/portfolio/img_p6.jpg,
                                             images/desktop-img/portfolio/img_p6@2x.jpg 2x
-                                            "
-                                            media="(min-width: 1200px)"
-                                            >
-                                        <source srcset="
+                                            " media="(min-width: 1200px)">
+                                    <source srcset="
                                             images/tablet-img/portfolio/img_p6.webp,
                                             images/tablet-img/portfolio/img_p6@2x.webp 2x
-                                            "
-                                            media="(min-width: 768px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(min-width: 768px)" type="image/webp">
+                                    <source srcset="
                                             images/tablet-img/portfolio/img_p6.jpg,
                                             images/tablet-img/portfolio/img_p6@2x.jpg 2x
-                                            "
-                                            media="(min-width: 768px)" 
-                                            >
-                                            
-                                        
-                                            <img src="./images/img_p6.webp" alt="" >
-                                    </picture>
-                                   
-                                    <div class="overlay-portfolio">
-                                        <p>Технокряк это современная площадка распространения
-                                            коронавируса. Компании используют эту платформу для
-                                            цифрового шпионажа и атак на защищённые
-                                            сервера конкурентов.</p>
-                                    </div>
+                                            " media="(min-width: 768px)">
+
+
+                                    <img src="./images/img_p6.webp" alt="">
+                                </picture>
+
+                                <div class="overlay-portfolio">
+                                    <p>Технокряк это современная площадка распространения
+                                        коронавируса. Компании используют эту платформу для
+                                        цифрового шпионажа и атак на защищённые
+                                        сервера конкурентов.</p>
                                 </div>
-                                <div class="subtitle-content">
-                                    <h2 class="list-cadrs__subtitle">Издание Limited Edition</h2>
-                                    <p class="list-cadrs__description">Дизайн</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="list-cadrs__item">
-                            <a href="" class="list-cadrs__link link-style">
-                                <div class="box-overlay">
-                                    <picture>
-                                        <source srcset="
+                            </div>
+                            <div class="subtitle-content">
+                                <h2 class="list-cadrs__subtitle">Издание Limited Edition</h2>
+                                <p class="list-cadrs__description">Дизайн</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-cadrs__item">
+                        <a href="" class="list-cadrs__link link-style">
+                            <div class="box-overlay">
+                                <picture>
+                                    <source srcset="
                                             images/mobile-img/portfolio/img_p7.webp,
                                             images/mobile-img/portfolio/img_p7@2x.webp 2x
-                                            "
-                                            media="(max-width: 767px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(max-width: 767px)" type="image/webp">
+                                    <source srcset="
                                             images/mobile-img/portfolio/img_p7.jpg,
                                             images/mobile-img/portfolio/img_p7@2x.jpg 2x
-                                            "
-                                            media="(max-width: 767px)" 
-                                            >
-                                            <source srcset="
+                                            " media="(max-width: 767px)">
+                                    <source srcset="
                                             images/desktop-img/portfolio/img_p7.webp,
                                             images/desktop-img/portfolio/img_p7@2x.webp 2x
-                                            "
-                                            media="(min-width: 1200px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(min-width: 1200px)" type="image/webp">
+                                    <source srcset="
                                             images/desktop-img/portfolio/img_p7.jpg,
                                             images/desktop-img/portfolio/img_p7@2x.jpg 2x
-                                            "
-                                            media="(min-width: 1200px)"
-                                            >
-                                        <source srcset="
+                                            " media="(min-width: 1200px)">
+                                    <source srcset="
                                             images/tablet-img/portfolio/img_p7.webp,
                                             images/tablet-img/portfolio/img_p7@2x.webp 2x
-                                            "
-                                            media="(min-width: 768px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(min-width: 768px)" type="image/webp">
+                                    <source srcset="
                                             images/tablet-img/portfolio/img_p7.jpg,
                                             images/tablet-img/portfolio/img_p7@2x.jpg 2x
-                                            "
-                                            media="(min-width: 768px)" 
-                                            >
-                                            
-                                            <img src="./images/img_p7.webp" alt="" >
-                                    </picture>
-                                    
-                                    <div class="overlay-portfolio">
-                                        <p>Технокряк это современная площадка распространения
-                                            коронавируса. Компании используют эту платформу для
-                                            цифрового шпионажа и атак на защищённые
-                                            сервера конкурентов.</p>
-                                    </div>
+                                            " media="(min-width: 768px)">
+
+                                    <img src="./images/img_p7.webp" alt="">
+                                </picture>
+
+                                <div class="overlay-portfolio">
+                                    <p>Технокряк это современная площадка распространения
+                                        коронавируса. Компании используют эту платформу для
+                                        цифрового шпионажа и атак на защищённые
+                                        сервера конкурентов.</p>
                                 </div>
-                                <div class="subtitle-content">
-                                    <h2 class="list-cadrs__subtitle">Проект LAB</h2>
-                                    <p class="list-cadrs__description">Маркетинг</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="list-cadrs__item">
-                            <a href="" class="list-cadrs__link link-style">
-                                <div class="box-overlay">
-                                    <picture>
-                                        <source srcset="
+                            </div>
+                            <div class="subtitle-content">
+                                <h2 class="list-cadrs__subtitle">Проект LAB</h2>
+                                <p class="list-cadrs__description">Маркетинг</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-cadrs__item">
+                        <a href="" class="list-cadrs__link link-style">
+                            <div class="box-overlay">
+                                <picture>
+                                    <source srcset="
                                             images/mobile-img/portfolio/img_p8.webp,
                                             images/mobile-img/portfolio/img_p8@2x.webp 2x
-                                            "
-                                            media="(max-width: 767px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(max-width: 767px)" type="image/webp">
+                                    <source srcset="
                                             images/mobile-img/portfolio/img_p8.jpg,
                                             images/mobile-img/portfolio/img_p8@2x.jpg 2x
-                                            "
-                                            media="(max-width: 767px)" 
-                                            >
-                                            <source srcset="
+                                            " media="(max-width: 767px)">
+                                    <source srcset="
                                             images/desktop-img/portfolio/img_p8.webp,
                                             images/desktop-img/portfolio/img_p8@2x.webp 2x
-                                            "
-                                            media="(min-width: 1200px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(min-width: 1200px)" type="image/webp">
+                                    <source srcset="
                                             images/desktop-img/portfolio/img_p8.jpg,
                                             images/desktop-img/portfolio/img_p8@2x.jpg 2x
-                                            "
-                                            media="(min-width: 1200px)"
-                                            >
-                                        <source srcset="
+                                            " media="(min-width: 1200px)">
+                                    <source srcset="
                                             images/tablet-img/portfolio/img_p8.webp,
                                             images/tablet-img/portfolio/img_p8@2x.webp 2x
-                                            "
-                                            media="(min-width: 768px)" 
-                                            type="image/webp">
-                                        <source srcset="
+                                            " media="(min-width: 768px)" type="image/webp">
+                                    <source srcset="
                                             images/tablet-img/portfolio/img_p8.jpg,
                                             images/tablet-img/portfolio/img_p8@2x.jpg 2x
-                                            "
-                                            media="(min-width: 768px)" 
-                                            >
-                                            
-                                        
-                                            <img src="./images/img_p8.webp" alt="" >
-                                    </picture>
-                                    
-                                    <div class="overlay-portfolio">
-                                        <p>Технокряк это современная площадка распространения
-                                            коронавируса. Компании используют эту платформу для
-                                            цифрового шпионажа и атак на защищённые
-                                            сервера конкурентов.</p>
-                                    </div>
+                                            " media="(min-width: 768px)">
+
+
+                                    <img src="./images/img_p8.webp" alt="">
+                                </picture>
+
+                                <div class="overlay-portfolio">
+                                    <p>Технокряк это современная площадка распространения
+                                        коронавируса. Компании используют эту платформу для
+                                        цифрового шпионажа и атак на защищённые
+                                        сервера конкурентов.</p>
                                 </div>
-                                <div class="subtitle-content">
-                                    <h2 class="list-cadrs__subtitle">Growing Business</h2>
-                                    <p class="list-cadrs__description">Приложение</p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-        </main>
-        <!--Футер-->
-        <footer class="footer">
-            <div class="container footer__container">
-                <div class="footer__address">
-                    <div class="bock-logo footer__logo">
-                        <a href="./index.html" class="bock-logo__link logo link-style">
-                            Web<span class="bock-logo__link--lighter">Studio</span>
+                            </div>
+                            <div class="subtitle-content">
+                                <h2 class="list-cadrs__subtitle">Growing Business</h2>
+                                <p class="list-cadrs__description">Приложение</p>
+                            </div>
                         </a>
-                    </div>
-                    
-                    <address class="addr">
-                        <ul class="list-address list">
-                            <li class="list-address__item">
-                                <span class="list-address__item--lighter">г. Киев, пр-т Леси Украинки, 26</span>
-                            </li>
-                            <li class="list-address__item"><a href="mailto:info@example.com" class="list-address__item--darker link-style">info@example.com</a>
-                            </li>
-                            <li class="list-address__item"><a href="tel:+380991111111" class="list-address__item--darker link-style">+38 099 111 11 11</a>
-                            </li>
-                        </ul>
-                    </address>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <!--Футер-->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__address">
+                <div class="bock-logo footer__logo">
+                    <a href="./index.html" class="bock-logo__link logo link-style">
+                        Web<span class="bock-logo__link--lighter">Studio</span>
+                    </a>
                 </div>
-                <div class="block-social footer__social">
-                    <h3 class="block-social__title ">присоединяйтесь</h3>
-                    <ul class="lists-networks list">
-                        <li class="lists-networks__item">
-                            <a href="" class="lists-networks__link lists-networks__link--dark" aria-label="instagram">
-                                <svg class="lists-networks__icon lists-networks__icon--light" width="20" height="20">
-                                    <use href="./images/sprite.svg#instagram"></use>
-                                </svg>
-                            </a>
+
+                <address class="addr">
+                    <ul class="list-address list">
+                        <li class="list-address__item">
+                            <span class="list-address__item--lighter">г. Киев, пр-т Леси Украинки, 26</span>
                         </li>
-                        <li class="lists-networks__item">
-                            <a href="" class="lists-networks__link lists-networks__link--dark" aria-label="twitter">
-                                <svg class="lists-networks__icon lists-networks__icon--light" width="20" height="20">
-                                    <use href="./images/sprite.svg#twitter"></use>
-                                </svg>
-                            </a>
+                        <li class="list-address__item"><a href="mailto:info@example.com"
+                                class="list-address__item--darker link-style">info@example.com</a>
                         </li>
-                        <li class="lists-networks__item">
-                            <a href="" class="lists-networks__link lists-networks__link--dark" aria-label="facebook">
-                                <svg class="lists-networks__icon lists-networks__icon--light" width="20" height="20">
-                                    <use href="./images/sprite.svg#facebook">
-                                    </use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="lists-networks__item">
-                            <a href="" class="lists-networks__link lists-networks__link--dark" aria-label="linkedin">
-                                <svg class="lists-networks__icon lists-networks__icon--light" width="20" height="20">
-                                    <use href="./images/sprite.svg#linkedin"></use>
-                                </svg>
-                            </a>
+                        <li class="list-address__item"><a href="tel:+380991111111"
+                                class="list-address__item--darker link-style">+38 099 111 11 11</a>
                         </li>
                     </ul>
-                </div>
-                <div class="footer__mailing">
-                    <form class="form-mailing">
-                        <label for="E-mail" class="form-mailing__label">Подпишитесь на рассылку</label>
-                        <div class="form-mailing__box">
-                            <input type="email" name="email" id="E-mail" class="form-mailing__input" placeholder="E-mail" required>
-                            <button type="submit" class="button-mailing btn">
-                                    <b class="button-mailing__text">Подписаться</b>
-                                    <svg width="24" height="24" class="button-mailing__icon">
-                                        <use href="./images/sprite.svg#icon-send"></use>
-                                    </svg>
-                            </button>
-                        </div>
-                    </form>
-                </div>
+                </address>
             </div>
-        </footer>   
-        <script src="./js/modal.js"></script> 
-        <script src="./js/headerMenu.js"></script> 
-    </body>
+            <div class="block-social footer__social">
+                <h3 class="block-social__title ">присоединяйтесь</h3>
+                <ul class="lists-networks list">
+                    <li class="lists-networks__item">
+                        <a href="" class="lists-networks__link lists-networks__link--dark" aria-label="instagram">
+                            <svg class="lists-networks__icon lists-networks__icon--light" width="20" height="20">
+                                <use href="./images/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="lists-networks__item">
+                        <a href="" class="lists-networks__link lists-networks__link--dark" aria-label="twitter">
+                            <svg class="lists-networks__icon lists-networks__icon--light" width="20" height="20">
+                                <use href="./images/sprite.svg#twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="lists-networks__item">
+                        <a href="" class="lists-networks__link lists-networks__link--dark" aria-label="facebook">
+                            <svg class="lists-networks__icon lists-networks__icon--light" width="20" height="20">
+                                <use href="./images/sprite.svg#facebook">
+                                </use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="lists-networks__item">
+                        <a href="" class="lists-networks__link lists-networks__link--dark" aria-label="linkedin">
+                            <svg class="lists-networks__icon lists-networks__icon--light" width="20" height="20">
+                                <use href="./images/sprite.svg#linkedin"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__mailing">
+                <form class="form-mailing">
+                    <label for="E-mail" class="form-mailing__label">Подпишитесь на рассылку</label>
+                    <div class="form-mailing__box">
+                        <input type="email" name="email" id="E-mail" class="form-mailing__input" placeholder="E-mail"
+                            required>
+                        <button type="submit" class="button-mailing btn">
+                            <b class="button-mailing__text">Подписаться</b>
+                            <svg width="24" height="24" class="button-mailing__icon">
+                                <use href="./images/sprite.svg#icon-send"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/modal.js"></script>
+    <script src="./js/headerMenu.js"></script>
+</body>
+
 </html>

@@ -1,51 +1,46 @@
-.lists-networks{
-    display: flex;
+.lists-networks {
+  display: flex;
 
-        &__link:hover,
-        &__link:focus {
-        background-color: $accentColor;
-        cursor: pointer;
-        }
+  &__link:hover,
+  &__link:focus {
+    background-color: $accentColor;
+    cursor: pointer;
+  }
 }
-  
-  .lists-networks__link {
-    @include centeredFlex(inline-flex);
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-  
+
+.lists-networks__link {
+  @include centeredFlex(inline-flex);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  transition: background-color 250ms $timingFunction;
+
+  &--dark {
+    background-color: rgba(255, 255, 255, 0.1);
     transition: background-color 250ms $timingFunction;
-
-        &--dark {
-          background-color: rgba(255, 255, 255, 0.1);
-          transition: background-color 250ms $timingFunction;
-        }
-        
-        &--dark:hover,
-        &--dark:focus {
-          background-color: $accentColor;
-        }
   }
-  
-  .lists-networks__icon {
-    fill: #afb1b8;
-    transition: fill 250ms $timingFunction;
 
-        .lists-networks__link:hover &,
-        .lists-networks__link:focus & {
-        fill: #ffffff;
-        }
-
-        &--light {
-          fill: $primaryColorWhite;
-        }
+  &--dark:hover,
+  &--dark:focus {
+    background-color: $accentColor;
   }
-  
-  .lists-networks__item:not(:last-child) {
-    margin-right: 10px;
+}
+
+.lists-networks__icon {
+  fill: #afb1b8;
+  transition: fill 250ms $timingFunction;
+
+  .lists-networks__link:hover &,
+  .lists-networks__link:focus & {
+    fill: #ffffff;
   }
-  
 
-  
+  &--light {
+    fill: $primaryColorWhite;
+  }
+}
 
-  
+.lists-networks__item:not(:last-child) {
+  margin-right: 10px;
+}
